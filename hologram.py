@@ -45,7 +45,7 @@ for filename in sys.argv[1:]:
         folders.append(ext.domain)
     print(filenames)
     
-""""
+
     for folder,filename in zip(folders,filenames):
         if not (os.path.isdir(folder) or os.path.exists(folder)):
             print("making directory",folder)
@@ -55,11 +55,9 @@ for filename in sys.argv[1:]:
             if os.path.exists(folder):
                 os.rename(filename,folder+"/"+filename)
                 files_moved +=1
-"""
-"""
+
 print (files_moved,"files moved into ",folders_created,"folders.")
 print ("Done.")
-"""
 f.close()
     
     
