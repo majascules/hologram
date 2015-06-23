@@ -1,0 +1,5 @@
+# Takes N documents containing URLs from the command line, processes URLs
+# and creates folders from those URLs TLDs
+# If there are filenames in the path, it will move those files into the folders
+# Documents is expected to be .csv, comma-delimited, with one column
+# Values are expected to be fully qualified URLs, including the schema
