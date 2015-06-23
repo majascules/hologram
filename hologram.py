@@ -43,21 +43,28 @@ for filename in sys.argv[1:]:
     
         #Append Cleansed Domains into the URLs array 
         folders.append(ext.domain)
-    print(filenames)
+    print (filenames)
     
 
     for folder,filename in zip(folders,filenames):
-        if not (os.path.isdir(folder) or os.path.exists(folder)):
-            print("making directory",folder)
+        if not os.path.isdir(folder):
+            print ("making directory",folder)
             os.mkdir(folder)
             folders_created +=1
+        else:
+            print (folder,"exists, skipping")
+            
         if os.path.exists(filename):
             if os.path.exists(folder):
                 os.rename(filename,folder+"/"+filename)
                 files_moved +=1
+            else:
+                print ("error:",folder,"does not exist")
+        else:
+            print ("error:",filename,"listed file doest not exist")
+            
 
 print (files_moved,"files moved into ",folders_created,"folders.")
 print ("Done.")
+
 f.close()
-    
-    
