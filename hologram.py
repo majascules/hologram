@@ -69,6 +69,4 @@ for folder,filename in zip(folders,filenames):
 print (files_moved,"files moved into ",folders_created,"folders in",time.time()-start_time,"seconds")
 print ("Done.")
 
-
->>>>>>> a74a0b60b97300dda292d3e0d1eedffd8d0c13b4
 f.close()
